@@ -10,8 +10,11 @@ public class StringHelper {
      * @return the number of vowels
      */
     public static int countVowels(String message) {
-        //TODO: Replace with your code.
-        return 0;
+        int numVowels = 0;
+        for (int i = 0; i < message.length(); i++) {
+            if (message.charAt(i) == 'a' || message.charAt(i) == 'e' || message.charAt(i) == 'i' || message.charAt(i) == 'o' || message.charAt(i) == 'u') numVowels++;
+        }
+        return numVowels;
     }
 
     /**
@@ -31,8 +34,20 @@ public class StringHelper {
      * @author Prof. Rollins
      */
     public static String encrypt(String message, int shift) {
-        //TODO: Replace with your code.
-        return null;
+        if (shift > 26) return null;
+        char[] encrypted = message.toCharArray();
+        int ascii;
+
+        for (int i = 0; i < encrypted.length; i++) {
+
+            ascii = (int) encrypted[i];
+
+            if ((ascii < 65 || ascii > 90) && (ascii < 97 || ascii > 122)) return null;
+
+            encrypted[i] = (char) (ascii + shift);
+        }
+
+        return String.valueOf(encrypted);
     }
 
     /** Main method: runs methods of class StringHelper */
