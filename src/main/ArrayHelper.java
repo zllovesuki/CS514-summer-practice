@@ -10,7 +10,10 @@ public class ArrayHelper {
      * @param arr array of integers
      */
     public static void print(int[] arr) {
-        //TODO: Replace with your code.
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
 
     /** Returns the sum of all elements of the array
@@ -19,8 +22,11 @@ public class ArrayHelper {
      * @return sum of elements
      */
     public static int sum(int[] arr) {
-        //TODO: Replace with your code.
-        return 0;
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
     }
 
     /** Returns the product of all elements of the array
@@ -29,8 +35,11 @@ public class ArrayHelper {
      * @return product of all elements
      */
     public static int product(int[] arr) {
-        //TODO: Replace with your code.
-        return 1;
+        int product = 1;
+        for (int i = 0; i < arr.length; i++) {
+            product *= arr[i];
+        }
+        return product;
     }
 
     /**
@@ -41,7 +50,9 @@ public class ArrayHelper {
      * @return
      */
     public static boolean threshold(int[] arr, int thres) {
-        //TODO: Replace with your code.
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= thres) return true;
+        }
         return false;
     }
 
@@ -54,7 +65,9 @@ public class ArrayHelper {
      * @return
      */
     public static boolean find(int[] arr, int elem) {
-        //TODO: Replace with your code.
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == elem) return true;
+        }
         return false;
     }
 
@@ -65,8 +78,11 @@ public class ArrayHelper {
      * @return
      */
     public static int countOccurrences(int[] arr, int elem) {
-        //TODO: Replace with your code.
-        return 0;
+        int occur = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == elem) occur++;
+        }
+        return occur;
     }
 
     /** Returns true if array of integers has duplicate elements,
@@ -79,6 +95,11 @@ public class ArrayHelper {
      * @return true if array has duplicates and false otherwise
      */
     public static boolean hasDuplicates(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i] == arr[j] && i != j) return true;
+            }
+        }
         return false;
     }
 

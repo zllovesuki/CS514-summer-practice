@@ -15,8 +15,7 @@ public class ConversionsHelper {
      * @return
      */
     public static double ouncesToGallons(int ounces) {
-        //TODO: Replace with your code.
-        return 0;
+        return ounces * 128.0;
     }
 
     /**
@@ -27,8 +26,7 @@ public class ConversionsHelper {
      * @return
      */
     public static double cmToFeet(int cm) {
-        //TODO: Replace with your code.
-        return 0;
+        return cm * 30.48;
     }
 
     public static void main(String[] args) {
